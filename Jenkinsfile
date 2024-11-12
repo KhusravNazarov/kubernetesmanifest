@@ -12,9 +12,9 @@ node {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'gitOps', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
-                        sh "git config user.email raj@cloudwithraj.com"
-                        sh "git config user.name RajSaha"
-                        //sh "git switch master"
+                        sh "git config user.email onlyyou7400@gmail.com"
+                        sh "git config user.name KhusravNazarov"
+                        //sh "git switch main"
                         sh "cat deployment.yaml"
                         sh "sed -i 's+gass7400/kube-image.*+raj80dockerid/test:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
